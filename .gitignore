@@ -1,0 +1,96 @@
+# Rust-specific
+/target
+**/*.rs.bk
+Cargo.lock      # ← keep this UNCOMMENTED only for libraries!
+                # For applications/bins → usually keep Cargo.lock committed
+
+# Build artifacts
+Cargo.toml.orig
+*.pdb           # PDB debug files (mostly Windows)
+*.dSYM          # macOS debug symbols
+*.su            # Stack usage analysis files
+
+# Rustfmt / clippy
+rustfmt.toml.bak
+.clippy.toml.bak
+rust-toolchain.toml.bak
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test / coverage output
+lcov.info
+*.profraw
+*.profdata
+default.profraw
+coverage/
+target/llvm-cov/
+target/coverage/
+.coverage/
+
+# Benchmark results
+target/criterion/
+
+# Async / tokio console
+target/tokio-console-*
+
+# Common dependency folders people sometimes create manually
+vendor/
+crates/
+deps/
+
+# Python tools sometimes used in Rust projects (maturin, maturin develop, etc.)
+__pycache__/
+*.egg-info/
+venv/
+.venv/
+env/
+ENV/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.old
+
+# Web / WASM specific (if applicable)
+pkg/
+wasm-pack.log
+wasm32-*.wasm
+*.wasm
+
+# If you're using cargo-dist / cargo-generate-rpm / tauri / etc.
+*.deb
+*.rpm
+*.AppImage
+*.msi
+*.pkg
+dist/
+release/
+
+# Personal / machine-specific
+.local.toml
+config.local.*
+secrets.*
+.env
+.env.*
+!.env.example
+
+# Common documentation generation folders
+docs/_build/
+site/
+book/
+mdbook/
+
+# -----------------------------------------------
+# Keep Cargo.lock for applications (most common case)
+# Uncomment the next line ONLY if this is a library / crate meant for publishing
+# Cargo.lock
+# -----------------------------------------------
