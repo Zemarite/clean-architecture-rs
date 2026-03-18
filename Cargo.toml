@@ -1,7 +1,7 @@
 
 [workspace]
-resolver = "2"
-members = []
+resolver = "3"
+members = ["src/domain"]
 
 [workspace.package]
 rust-version = "1.94"
