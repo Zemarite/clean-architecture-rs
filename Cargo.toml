@@ -1,7 +1,7 @@
 
 [workspace]
 resolver = "3"
-members = ["src/domain"]
+members = ["src/application","src/domain", "src/infrastructure", "src/interface"]
 
 [workspace.package]
 rust-version = "1.94"
