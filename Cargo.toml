@@ -1,7 +1,26 @@
 
 [workspace]
 resolver = "3"
-members = ["src/application","src/domain", "src/infrastructure", "src/interface"]
+members = [
+    "src/application",
+    "src/domain",
+    "src/infrastructure",
+    "src/interface",
+    "src/infrastructure/external_services/email",
+]
 
 [workspace.package]
 rust-version = "1.94"
+
+[workspace.dependencies]
+# -- Json
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- Tracing
+tracing = "0.1" # optional logging
+# -- Others
+dotenvy = "0.15"
+derive_more = { version = "2.1.1", features = ["from", "display"] }
